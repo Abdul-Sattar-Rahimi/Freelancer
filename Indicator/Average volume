@@ -1,0 +1,7 @@
+//@version=5
+indicator("Average volume", overlay=true)
+
+avgClose = ta.sma(close, 14)
+
+//میانگین را روی شمعدان رسم می کنه
+label.new(bar_index, close, str.tostring(avgClose, format.mintick), color=color.new(color.blue, 0), style=label.style_label_down, textcolor=color.white)
